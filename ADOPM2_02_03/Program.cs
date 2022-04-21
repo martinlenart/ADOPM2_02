@@ -10,10 +10,15 @@ namespace ADOPM2_02_03
         {
             var rr1 = new RectangleRecord (400,100);
             var rr2 = rr1;
-            var rr3 = new RectangleRecord(400, 100);
+
+            var rr3 = rr2 with { Width = 800 };
+            var rr4 = rr2 with { Height = 200 };
+
             Console.WriteLine(rr1);
             Console.WriteLine(rr1 == rr2);
             Console.WriteLine(rr1 == rr3);
+
+
 
             (double width, double height) = rr1;
             Console.WriteLine(width);

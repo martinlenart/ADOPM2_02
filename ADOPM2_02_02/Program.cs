@@ -29,20 +29,24 @@ namespace ADOPM2_02_02
 				height = Height;
 			}
 		}
-		class immutableRectangleClass
+		class immutableRectangleClass : IEquatable<immutableRectangleClass>	
 		{
-			public double Width { get; init; }
+			public double Width { get; private set; }
 			public double Height { get; init; }
 
-			public static bool Equals(immutableRectangleClass r1, immutableRectangleClass r2) =>
-				(r1.Width, r1.Height) == (r2.Width, r2.Height);
+			public bool Equals(immutableRectangleClass other) =>
+						(Width, Height) == (other.Width, other.Height);
+
+			public static bool Equals(immutableRectangleClass r1, immutableRectangleClass r2) => r1.Equals(r2);	
             public static bool operator ==(immutableRectangleClass r1, immutableRectangleClass r2) => Equals(r1, r2);
 			public static bool operator !=(immutableRectangleClass r1, immutableRectangleClass r2) => !Equals(r1, r2);
 			public override string ToString() => 
 				$"{nameof(immutableRectangleClass)} {{ {nameof(Width)}={Width}, {nameof(Height)}={Height} }}";
-			public immutableRectangleClass GetQuad()
+			
+			public immutableRectangleClass SetWidth (double width)	
 			{
-				var result = new immutableRectangleClass(this.Width *2, this.Height*2);
+				var result = new immutableRectangleClass(this);
+				result.Width = width;	
 				return result;
 			}
 
@@ -64,6 +68,7 @@ namespace ADOPM2_02_02
 		}
 		static void Main(string[] args)
         {
+			/*
 			var irs1 = new immutableRectangleStruct { Width = 400, Height = 100 };
 			var irs2 = irs1;
 			var irs3 = new immutableRectangleStruct ();
@@ -72,14 +77,19 @@ namespace ADOPM2_02_02
 			Console.WriteLine(irs1 == irs3);
 			Console.WriteLine(irs1.GetQuad());
 			Console.WriteLine();
+			*/
 
-			var irc1 = new immutableRectangleClass { Width = 400, Height = 100 };
+			var irc1 = new immutableRectangleClass(400, 200);
 			var irc2 = new immutableRectangleClass(irc1);
-			var irc3 = new immutableRectangleClass();
+			var irc3 = irc1.SetWidth(800);
+
+            Console.WriteLine(irc1);
+			Console.WriteLine(irc2);
+			Console.WriteLine(irc3);
+	
 			Console.WriteLine(irc1);
 			Console.WriteLine(irc1 == irc2);
 			Console.WriteLine(irc1 == irc3);
-			Console.WriteLine(irc1.GetQuad());
 		}
 	}
 }
