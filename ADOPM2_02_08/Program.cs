@@ -40,7 +40,17 @@ namespace ADOPM2_02_08
                 return Year.CompareTo(other.Year);
         }
         #endregion
+
+        public Car() { }
+        public Car (Car org)
+        {
+            this.Make = org.Make;
+            this.Model = org.Model;
+            this.Year = org.Year;
+        }
     }
+
+
     class Program
     {
         static void Main(string[] args)
