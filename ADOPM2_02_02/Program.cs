@@ -29,6 +29,7 @@ namespace ADOPM2_02_02
 				height = Height;
 			}
 		}
+
 		class immutableRectangleClass : IEquatable<immutableRectangleClass>	
 		{
 			public double Width { get; private set; }
@@ -68,7 +69,7 @@ namespace ADOPM2_02_02
 		}
 		static void Main(string[] args)
         {
-			/*
+			
 			var irs1 = new immutableRectangleStruct { Width = 400, Height = 100 };
 			var irs2 = irs1;
 			var irs3 = new immutableRectangleStruct ();
@@ -77,7 +78,7 @@ namespace ADOPM2_02_02
 			Console.WriteLine(irs1 == irs3);
 			Console.WriteLine(irs1.GetQuad());
 			Console.WriteLine();
-			*/
+			
 
 			var irc1 = new immutableRectangleClass(400, 200);
 			var irc2 = new immutableRectangleClass(irc1);
@@ -93,5 +94,4 @@ namespace ADOPM2_02_02
 		}
 	}
 }
-//2.    In your solution DeckOfCards, make an immutable version of PlayingCard.
 

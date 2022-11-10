@@ -130,9 +130,4 @@ namespace ADOPM2_02_08
     //      - Overload the == and != operators and create two instance to test it
 
     //4.    Implement IComparable<T> for PlayingCard. Create two instances and test it
-
-    //5.    Change the array of Stack<Chef> in BOOP3_06_02 exercise 4 and 5 to List<T> (System.Collections.Generic) and fill the lists with instances
-    //6.    - Set a variable, findChef, of type Chef to an instance with a certain name
-    //      - Loop through the array of List<Chef> and search for first chef that is equals findChef
-    //7.    Refracture exercise 6 into a Method
 }

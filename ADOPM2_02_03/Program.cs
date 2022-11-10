@@ -27,6 +27,5 @@ namespace ADOPM2_02_03
     }
 }
 //Exercises
-//1.	Make the Apple type in BOOPM3_02  immutable using record? 
+//1.	Make the Apple type in ADOPM2_01_02  immutable using record? 
 //		Demonstrate immutability by assignment and printout.
-//2.    In your solution DeckOfCards, make an immutable version of PlayingCard using record.

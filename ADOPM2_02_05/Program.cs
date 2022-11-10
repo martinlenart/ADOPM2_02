@@ -42,7 +42,7 @@ namespace ADOPM2_02_05
             Console.WriteLine(rr2);
             Console.WriteLine(rr1 == rr2);  // false
 
-            // (double width, double height) = rr1;  // Width is no longer part of the generated deconstructor
+            //(double width, double height) = rr1;  // Error: Width is no longer part of the generated deconstructor
         }
     }
 }

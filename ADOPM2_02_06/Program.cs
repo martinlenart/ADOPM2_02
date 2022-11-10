@@ -152,11 +152,10 @@ namespace ADOPM2_02_06
     }
 
     //Exercises
-    //1.    -Create an array of type int[] and initializa it with some value.
-    //      -Create a Method that takes int[] as a parameter, loops through the array and print out the values
-    //      -Create another array of string[] and a method that loops through the array and print out the values. 
-    //      -Notice the small difference in the Methods
-    //2.    -Using DRY, make one single method which is using a Generic Parameter T that prints out both arrays
-    //3.    -Use the same Method to print out an array of the type PlayingCard
-    //4.    -Use above Stack to Push and Pop a PlayingCard
+    //1.    Create an array of type int[] and initializa it with some value.
+    //      Create a Method that takes int[] as a parameter, loops through the array and print out the values
+    //      Create another array of string[] and a method that loops through the array and print out the values. 
+    //      Notice the small difference in the Methods
+
+    //2.    Using DRY, make one single method which is using a Generic Parameter T that prints out both arrays
 }
